@@ -30,7 +30,7 @@ class DataLinkLayer:
             str: The extracted payload from the frame.
         """
         # Logs the source and destination MAC addresses for tracing
-        print("\033[95m[DATA LINK LAYER] Frame from {data['source_mac']} to {data['destination_mac']}\033[0m")
+        print(f"\033[95m[DATA LINK LAYER] Frame from {data['source_mac']} to {data['destination_mac']}\033[0m")
 
         # Returns the payload from the frame
         return data["payload"]

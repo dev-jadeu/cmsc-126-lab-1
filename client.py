@@ -28,25 +28,32 @@ def main():
 
     # Pass the message through the layers
     app_data = app_layer.send(message)
-    if debug: print(f"[Application Layer] {app_data}")
+    if debug:
+        print(f"\033[32m[APPLICATION LAYER] {app_data}\033[0m")
 
     pres_data = pres_layer.send(app_data)
-    if debug: print(f"[Presentation Layer] {pres_data}")
+    if debug:
+        print(f"\033[36m[PRESENTATION LAYER] {pres_data}\033[0m")
 
     sess_data = sess_layer.send(pres_data)
-    if debug: print(f"[Session Layer] {sess_data}")
+    if debug:
+        print(f"\033[92m[SESSION LAYER] {sess_data}\033[0m")
 
     trans_data = trans_layer.send(sess_data)
-    if debug: print(f"[Transport Layer] {trans_data}")
+    if debug:
+        print(f"\033[93m[TRANSPORT LAYER] {trans_data}\033[0m")
 
     net_data = net_layer.send(trans_data)
-    if debug: print(f"[Network Layer] {net_data}")
+    if debug:
+        print(f"\033[94m[NETWORK LAYER] {net_data}\033[0m")
 
     data_data = data_layer.send(net_data)
-    if debug: print(f"[Data Link Layer] {data_data}")
+    if debug:
+        print(f"\033[95m[DATA LINK LAYER] {data_data}\033[0m")
 
     phys_layer.send(data_data)
-    if debug: print(f"[Physical Layer] Sent to server")
+    if debug:
+        print("\033[96m[PHYSICAL LAYER] Sent to server\033[0m")
 
     # Receive response from the server
     received_data = phys_layer.receive()

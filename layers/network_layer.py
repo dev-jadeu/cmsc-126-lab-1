@@ -30,7 +30,7 @@ class NetworkLayer:
             str: The original payload message
         """
         # Logs the source and destination IP addresses for tracing
-        print("\033[94m[NETWORK LAYER] Frame from {data['source_ip']} to {data['destination_ip']}\033[0m")
+        print(f"\033[94m[NETWORK LAYER] Frame from {data['source_ip']} to {data['destination_ip']}\033[0m")
 
         # Returns the payload from the IP packet
         return data["payload"]

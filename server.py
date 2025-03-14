@@ -37,7 +37,7 @@ def main():
     app_data = pres_layer.receive(pres_data)
     message = app_layer.receive(app_data)
 
-    print(f"server recieved message: {message}")
+    print(f"Server Received Message: {message}")
 
     # Secret response
     response = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -49,7 +49,7 @@ def main():
     encoded_response = data_layer.send(encoded_response)
     encoded_response = phys_layer.send(encoded_response)
 
-    print("server response sent")
+    print("Server Response Sent")
 
     # Close the connection
     conn.close()

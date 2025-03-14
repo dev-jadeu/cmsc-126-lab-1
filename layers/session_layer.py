@@ -29,7 +29,7 @@ class SessionLayer:
             str: The original payload message
         """
         # Prints the session ID
-        print("\033[92m[SESSION LAYER] Session ID: {data['session_id']}\033[0m")
+        print(f"\033[92m[SESSION LAYER] Session ID: {data['session_id']}\033[0m")
 
         # Returns the payload from the session-wrapped data
         return data["payload"]

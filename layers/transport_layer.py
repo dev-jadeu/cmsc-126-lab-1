@@ -29,7 +29,7 @@ class TransportLayer:
             str: The original payload message
         """
         # Prints the sequence number
-        print("\033[93m[TRANSPORT LAYER] Sequence number: {data['source_ip']}\033[0m")
+        print(f"\033[93m[TRANSPORT LAYER] Sequence number: {data['sequence']}\033[0m")
 
         # Returns the payload from the sequence-wrapped packet
         return data["payload"]
